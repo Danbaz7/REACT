@@ -53,6 +53,4 @@ REACT/
 - [Vite](https://vitejs.dev/)
 - [Netlify](https://www.netlify.com/) (for deployment)
 
-## 🤝 Contributing
-
-_Created December 2025. For learning and experimentation with React._
+_Created December by Daniel Obazee (2025) For learning and experimentation with React._
