@@ -1,1 +1,3 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eb651323-d363-482c-9bd5-056da769909a/deploy-status)](https://app.netlify.com/projects/glowing-jalebi-4e3a14/deploys)
+
 # LOADING...
