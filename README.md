@@ -2,12 +2,6 @@
 
 A modern React application built for learning and demonstrating essential React concepts, including components, props, state, and JSX. The project is organized for clarity, scalability, and ease of experimentation.
 
-## 🚀 Live Demo
-
-View the app: [https://magenta-pony-289fb7.netlify.app/](https://magenta-pony-289fb7.netlify.app/)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f6a3e335-c9bc-41e1-a67c-22de6babe0e8/deploy-status)](https://app.netlify.com/projects/magenta-pony-289fb7/deploys)
-
 ## 📚 Features
 
 - **Component-Based Architecture:** All UI elements are built as reusable React components.
@@ -46,11 +40,5 @@ REACT/
 - Manage state with hooks (`useState`)
 - Use JSX for dynamic UI rendering
 - Organize code for scalability and maintainability
-
-## 🧩 Technologies Used
-
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [Netlify](https://www.netlify.com/) (for deployment)
 
 _Created December by Daniel Obazee (2025) For learning and experimentation with React._
