@@ -12,7 +12,6 @@ function App() {
   function handleClick(selectedButton) {
     // selectedButton => "components", "jsx", "props", "states";
     setSelectedTopic(selectedButton);
-    // console.log(selectedTopic);
   }
 
   return (
@@ -22,38 +21,52 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
-            {/* one way of using props */}
-            <CoreConcept
-              title={CORE_CONCEPTS[0].title}
-              description={CORE_CONCEPTS[0].description}
-              image={CORE_CONCEPTS[0].image}
-            />
-
-            {/* More efficient/cleaner way of using props  */}
-            <CoreConcept {...CORE_CONCEPTS[1]} />
-            <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
+            {CORE_CONCEPTS.map((conceptItem) => (
+              <CoreConcept {...conceptItem} />
+            ))}
           </ul>
         </section>
 
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={() => handleClick("components")}>
+            <TabButton
+              isSelecetd={selectedTopic === "components"}
+              onSelect={() => handleClick("components")}
+            >
               Components
             </TabButton>
-            <TabButton onSelect={() => handleClick("jsx")}>JSX</TabButton>
-            <TabButton onSelect={() => handleClick("props")}>Props</TabButton>
-            <TabButton onSelect={() => handleClick("state")}>State</TabButton>
+            <TabButton
+              isSelecetd={selectedTopic === "jsx"}
+              onSelect={() => handleClick("jsx")}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isSelecetd={selectedTopic === "props"}
+              onSelect={() => handleClick("props")}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isSelecetd={selectedTopic === "state"}
+              onSelect={() => handleClick("state")}
+            >
+              State
+            </TabButton>
           </menu>
 
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTopic].code}</code>
-            </pre>
-          </div>
+          {!selectedTopic ? (
+            <p> Please select a topic.</p>
+          ) : (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <p>{EXAMPLES[selectedTopic].description}</p>
+              <pre>
+                <code>{EXAMPLES[selectedTopic].code}</code>
+              </pre>
+            </div>
+          )}
         </section>
       </main>
     </div>
